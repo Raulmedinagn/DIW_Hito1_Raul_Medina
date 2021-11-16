@@ -1,0 +1,33 @@
+@font-face {
+  /*Fuente de letra externa, deescargada de google fonts*/
+  font-family: "Regular Lato";
+  src: url(Lato/Lato-Regular.ttf);
+}
+body {
+  font-family: "Regular Lato";
+  background-color: #5A6761;
+}
+p {
+  color: white;
+}
+h2 {
+  color: green;
+}
+table,
+th {
+  border: 1px solid black;
+}
+form {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+#fotos {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+}
+img {
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+}

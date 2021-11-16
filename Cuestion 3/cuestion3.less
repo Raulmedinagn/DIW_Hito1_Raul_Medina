@@ -1,0 +1,47 @@
+@font-face {/*Fuente de letra externa, deescargada de google fonts*/
+    font-family: "Regular Lato";
+    src: url(Lato/Lato-Regular.ttf);
+}
+
+@fuente_letra: "Regular Lato";
+@color_letra_parrafos: white;
+@color_letra_titulos: green;
+@color_fondo:#5A6761;
+@borde_fino:1px solid black;
+@display_fotos: grid;
+@columnas_fotos: 2;
+@fotos_por_columna: 2fr;
+@ancho_fotos:300px;
+@alto_fotos:200px;
+@margen_mediano: 10px;
+@padding_mediano:10px;
+
+
+body{
+    font-family: @fuente_letra;
+    background-color: @color_fondo;
+}
+p{
+    color: @color_letra_parrafos;
+}
+h2{
+    color: @color_letra_titulos;
+}
+table,th{
+    border: @borde_fino;
+}
+form{
+    border: @borde_fino;
+    margin: @margen_mediano;
+    padding: @padding_mediano;
+}
+#fotos{
+    display: @display_fotos;
+    grid-template-columns: repeat(@columnas_fotos,@fotos_por_columna);
+}
+img{
+    width: @ancho_fotos;
+    height: @alto_fotos;
+    margin: @margen_mediano;
+
+}

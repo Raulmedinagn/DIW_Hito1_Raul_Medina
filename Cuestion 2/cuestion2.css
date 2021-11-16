@@ -1,0 +1,111 @@
+@font-face {/*Fuente de letra externa, deescargada de google fonts*/
+    font-family: "Regular Lato";
+    src: url(Lato/Lato-Regular.ttf);
+  }
+
+body{/*Selector de etiqueta*/
+    background-image: url(img/fondo.jpg);/*imgagen de fondo*/
+    font-family: "Regular Lato";/* cambiar tipografia */
+    color:green;
+}
+
+#inicio{/*selectior de id*/
+    margin: 10px;
+    display: inline-block;/*tipo de visualización de un elemento*/
+    height: 350px;
+}
+
+div h2{/*Selector avanzado, coge todos los h2 dentro de los div*/
+    font-size: xx-large;/*tamaño de letra*/
+    text-align: center;/*alineado del texto del h2*/
+}
+
+div > p{/*Selector avanzado, coge todos los p los cuales su padre es un div*/
+    text-align: justify;
+}
+
+#inicio p:last-child{/*selector avanzado, coge el ultimo p hijo del id inicio*/
+    text-align: center;
+    -webkit-text-stroke-width: 1px;/*ancho del borde del texto*/
+    -webkit-text-stroke-color: black;/*color del borde del texto*/
+    animation-name: palpitar;/*nombre de la animacion*/
+    animation-duration: 3s;/*duracion de la animacion*/
+    animation-iteration-count: infinite;/*numero de repeticiones de la duracion*/
+    
+}
+
+@keyframes palpitar {/*animacion*/
+    0%{
+      font-size: x-small;/*empieza con la letra pequeña*/
+    }
+  
+    50% {
+      font-size: xx-large;/*a la mitad de la animacion la letra está muy grande*/
+    }
+    100%{
+        font-size: x-small;/*acaba la animacion con la letra pequeña igual que cuando empezó*/
+      }
+  }
+
+#fotos{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);/*creo un display de celdas, le digo que tenga 4 columnas, y un item en cada columna*/
+}
+
+.cartel{
+   width: 250px;
+   height: 320px;
+   border: 1px solid black;
+   background-color: blanchedalmond;
+   margin: auto;
+}
+
+
+div > p{/*Selector avanzado, coge todos los p los cuales su padre es un div*/
+  margin: 15px;
+}
+
+#fotos img{
+  width: 90%;
+  margin: 5%;
+}
+
+a{
+  padding-top: 3%;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  color: black;
+}
+
+a:hover{/*Selector avanzado cuando estás encima del <a> se aplican las propiedades*/
+  color: green;
+  font-variant: small-caps;/*pone las letras en mayusculas */
+}
+
+/*Ejemplo precedencia de estilos*/
+#texto{
+  text-align: center;
+}
+.texto{
+  text-align: right;
+}
+body p{
+  text-align: left;
+}
+
+/*Diferencia display position y visibility*/
+/*
+.cartel:hover{
+  display: none;
+}
+.cartel:hover{
+  visibility: hidden;
+}
+.cartel:hover{
+  position: absolute;
+  top: 40px; left: -4000px; 
+}
+*/
+
+  
